@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(72, 72, 72);
+    min-height: 10vh;
+    color: white;
+}
+
+.navbar ul {
+    width: 50%;
+    margin-right: 1100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image {
+    width: 100vw;
+}

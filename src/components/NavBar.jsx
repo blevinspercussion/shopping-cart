@@ -1,8 +1,18 @@
 import './Components.css';
 
+import { Link } from 'react-router-dom';
+
 function NavBar () {
     return (
-        <div>
+        <div className='navbar'>
+            <ul>
+                <Link to="/shop">
+                    <li>Shop</li>
+                </Link>
+                <Link to="/cart">
+                    <li>Cart</li>
+                </Link>
+            </ul>
         </div>
     )
 }
