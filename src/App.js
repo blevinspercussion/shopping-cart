@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import ItemDetail from './components/ItemDetail';
 
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
@@ -61,6 +62,7 @@ function App() {
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/shop" element={ <Shop cart={cart} inventory={inventory}/> } />
+          <Route path="/shop/:itemName" element={ <ItemDetail cart={cart} inventory={inventory} /> } />
           <Route path="/cart" element={ <Cart cart={cart} inventory={inventory}/>} />
           <Route  />
         </Routes>
