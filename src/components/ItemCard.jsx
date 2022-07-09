@@ -14,7 +14,7 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
     const getNumberInCart = () => {
         let count = 0;
         for (let item of cart) {
-            if (item === code) {
+            if (item.code === code) {
                 count++;
             }
         };

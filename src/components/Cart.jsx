@@ -6,7 +6,11 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart}) {
         <div className='cart'>
             <h1>Cart</h1>
             {cart.map((index) => (
-                <CartItem cart={cart}/>
+                <CartItem 
+                    key={index.code}
+                    cart={cart}
+                    name={index.name}
+                    />
             ))}
         </div>
     )
