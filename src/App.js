@@ -54,6 +54,17 @@ function App() {
     },
   ]
 
+  // Functions
+
+  const addToCart = (code) => {
+    setCart(cart.concat(code));
+    console.log(cart);
+  };
+
+  const removeFromCart = () => {
+
+  };
+
 
   return (
     <div className="App">
@@ -61,8 +72,11 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/shop" element={ <Shop cart={cart} inventory={inventory}/> } />
-          <Route path="/shop/:itemName" element={ <ItemDetail cart={cart} inventory={inventory} /> } />
+          <Route path="/shop/*" element={ <Shop 
+                  cart={cart}
+                  inventory={inventory}
+                  addToCart={addToCart}
+                  /> } />
           <Route path="/cart" element={ <Cart cart={cart} inventory={inventory}/>} />
           <Route  />
         </Routes>

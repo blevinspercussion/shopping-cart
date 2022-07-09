@@ -72,3 +72,9 @@ a:hover {
     filter: drop-shadow(10px 10px 10px black);
     transition: 0.3s;
 }
+
+.item-detail {
+    background-color: white;
+    display: grid;
+
+}
