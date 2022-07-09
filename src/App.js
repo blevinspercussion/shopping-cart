@@ -88,7 +88,13 @@ function App() {
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}
                   /> } />
-          <Route path="/cart" element={ <Cart cart={cart} inventory={inventory}/>} />
+          <Route path="/cart" element={ <Cart 
+                                          cart={cart} 
+                                          inventory={inventory}
+                                          total={total}
+                                          addToCart={addToCart}
+                                          removeFromCart={removeFromCart}
+                                          />} />
           <Route  />
         </Routes>
       </Router>

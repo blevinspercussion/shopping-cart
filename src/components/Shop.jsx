@@ -12,7 +12,19 @@ function Shop ( {inventory, cart, total, addToCart, removeFromCart} ) {
                 </Routes>
 
             {inventory.map((index) => (
-                <ItemCard key={index.code} code={index.code} name={index.name} price={index.price} description={index.description} image={index.image} total={total} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
+                <ItemCard 
+                    key={index.code}
+                    item={index}
+                    code={index.code}
+                    name={index.name}
+                    price={index.price}
+                    description={index.description}
+                    image={index.image}
+                    total={total}
+                    cart={cart}
+                    inventory={inventory}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart} />
             ))}
         </div>
     )

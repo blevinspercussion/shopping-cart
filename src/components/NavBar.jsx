@@ -15,7 +15,7 @@ function NavBar ({cart, total}) {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Items in cart: {cart.length}, {total}</li>
+                    <li>Items in cart: {cart.length}</li>
                 </Link>
                 
             </ul>
