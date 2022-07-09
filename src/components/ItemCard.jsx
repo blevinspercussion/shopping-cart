@@ -32,7 +32,6 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
     const handlePlusClick = (e) => {
         e.preventDefault();
         addToCart(item);
-        console.log(cart);
     }
 
 

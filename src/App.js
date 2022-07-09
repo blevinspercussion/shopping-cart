@@ -57,20 +57,29 @@ function App() {
 
   // Functions
 
-  const addToCart = (code, price, total) => {
-    setCart(cart.concat(code));
-    setTotal(total += price);
+  // const addToCart = (code, price, total, item) => {
+  //   setCart(cart.concat(code));
+  //   setTotal(total += item);
+  //   console.log(item);
+  // };
+
+  const addToCart = (item) => {
+    setCart(cart.concat(item));
+    setTotal(total + item.price);
     console.log(total);
+    console.log(item.price);
+    console.log(cart);
   };
 
-  const removeFromCart = (code, price, total) => {
-    const index = cart.findIndex(item => item === code);
+  const removeFromCart = (item) => {
+    const index = cart.findIndex(item => item.code === item.code);
+    console.log(item);
     if (index > -1) {
       setCart([
         ...cart.slice(0, index),
         ...cart.slice(index + 1, cart.length)
       ]);
-      setTotal(total -= price);
+      setTotal(total - item.price);
     }
   };
 
