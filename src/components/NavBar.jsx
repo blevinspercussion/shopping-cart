@@ -3,7 +3,7 @@ import './Components.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function NavBar ({cart}) {
+function NavBar ({cart, total}) {
 
     useEffect(() => {
     }, [cart]);
@@ -15,7 +15,7 @@ function NavBar ({cart}) {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Items in cart: {cart.length}</li>
+                    <li>Items in cart: {cart.length}, {total}</li>
                 </Link>
                 
             </ul>

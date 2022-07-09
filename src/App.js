@@ -14,6 +14,7 @@ function App() {
 
   // Initialize State 
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
 
   // Define Props
   const inventory = [
@@ -56,11 +57,13 @@ function App() {
 
   // Functions
 
-  const addToCart = (code) => {
+  const addToCart = (code, price, total) => {
     setCart(cart.concat(code));
+    setTotal(total += price);
+    console.log(total);
   };
 
-  const removeFromCart = (code) => {
+  const removeFromCart = (code, price, total) => {
     const index = cart.findIndex(item => item === code);
     if (index > -1) {
       setCart([
@@ -68,18 +71,20 @@ function App() {
         ...cart.slice(index + 1, cart.length)
       ]);
     }
+    setTotal(total -= price);
   };
 
 
   return (
     <div className="App">
       <Router>
-      <Header cart={cart}/>
+      <Header cart={cart} total={total}/>
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/shop/*" element={ <Shop 
                   cart={cart}
                   inventory={inventory}
+                  total={total}
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}
                   /> } />

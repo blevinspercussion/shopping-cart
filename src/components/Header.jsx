@@ -4,13 +4,13 @@ import NavBar from './NavBar';
 
 import { Link } from 'react-router-dom';
 
-function Header ({cart}) {
+function Header ({cart, total}) {
     return (
         <div className='header'>
             <Link to="/">
                 <h1>The Snare Drum Store</h1>
             </Link>
-            <NavBar cart={cart}/>
+            <NavBar cart={cart} total={total}/>
             
         </div>
     )

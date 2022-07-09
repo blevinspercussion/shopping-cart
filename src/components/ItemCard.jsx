@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 
-function ItemCard ({code, name, price, description, image, cart, addToCart, removeFromCart}) {
+function ItemCard ({code, name, price, description, image, cart, total, addToCart, removeFromCart}) {
 
     
     useEffect(() => {
@@ -20,18 +20,18 @@ function ItemCard ({code, name, price, description, image, cart, addToCart, remo
         };
         return count;
     };
-    
+
     let numberInCart = getNumberInCart();
     
     const handlePlusClick = (e) => {
         e.preventDefault();
-        addToCart(code);
+        addToCart(code, price, total);
         getNumberInCart();
     };
 
     const handleMinusClick = (e) => {
         e.preventDefault();
-        removeFromCart(code);
+        removeFromCart(code, price, total);
         getNumberInCart();
     };
 
