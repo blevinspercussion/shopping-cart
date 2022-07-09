@@ -71,9 +71,11 @@ function App() {
     console.log(cart);
   };
 
-  const removeFromCart = (item) => {
-    const index = cart.findIndex(item => item.code === item.code);
-    console.log(item);
+  const removeFromCart = (item, name) => {
+    const index = cart.findIndex(item => item.name === name);
+    console.log(item.name);
+    console.log(name);
+    console.log(index);
     if (index > -1) {
       setCart([
         ...cart.slice(0, index),
