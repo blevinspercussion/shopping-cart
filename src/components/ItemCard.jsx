@@ -1,8 +1,10 @@
 import './Components.css';
 
-function ItemCard () {
+function ItemCard ({name, price, description}) {
     return (
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 
