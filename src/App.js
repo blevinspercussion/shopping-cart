@@ -68,9 +68,6 @@ function App() {
         ...cart.slice(index + 1, cart.length)
       ]);
     }
-    console.log(index);
-    console.log(code);
-    console.log(cart);
   };
 
 

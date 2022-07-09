@@ -1,18 +1,39 @@
 import './Components.css';
 
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 
-function ItemCard ({code, name, price, description, image, addToCart, removeFromCart}) {
+function ItemCard ({code, name, price, description, image, cart, addToCart, removeFromCart}) {
 
+    
+    useEffect(() => {
+        getNumberInCart();
+    }, [cart])
+
+    const getNumberInCart = () => {
+        let count = 0;
+        for (let item of cart) {
+            if (item === code) {
+                count++;
+            }
+        };
+        return count;
+    };
+    
+    let numberInCart = getNumberInCart();
+    
     const handlePlusClick = (e) => {
         e.preventDefault();
         addToCart(code);
+        getNumberInCart();
     };
 
     const handleMinusClick = (e) => {
         e.preventDefault();
         removeFromCart(code);
-    }
+        getNumberInCart();
+    };
 
     return (
         <div className='item-card'>
@@ -21,7 +42,7 @@ function ItemCard ({code, name, price, description, image, addToCart, removeFrom
                 <img className='product-image' src={image}></img>
             </Link>
             <h2>${price}</h2>
-            <h3>In Cart: </h3>
+            <h3>In Cart: {numberInCart}</h3>
             <div className='add-remove-buttons'>
                 <button onClick={handleMinusClick}>-</button>
                 <button onClick={handlePlusClick}>+</button>
