@@ -2,7 +2,7 @@ import './Components.css';
 
 function ItemCard ({name, price, description}) {
     return (
-        <div>
+        <div className='item-card'>
             
         </div>
     )
