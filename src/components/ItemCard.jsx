@@ -2,12 +2,17 @@ import './Components.css';
 
 import { Link } from 'react-router-dom';
 
-function ItemCard ({code, name, price, description, image, addToCart}) {
+function ItemCard ({code, name, price, description, image, addToCart, removeFromCart}) {
 
     const handlePlusClick = (e) => {
         e.preventDefault();
         addToCart(code);
     };
+
+    const handleMinusClick = (e) => {
+        e.preventDefault();
+        removeFromCart(code);
+    }
 
     return (
         <div className='item-card'>
@@ -18,7 +23,7 @@ function ItemCard ({code, name, price, description, image, addToCart}) {
             <h2>${price}</h2>
             <h3>In Cart: </h3>
             <div className='add-remove-buttons'>
-                <button>-</button>
+                <button onClick={handleMinusClick}>-</button>
                 <button onClick={handlePlusClick}>+</button>
             </div>
         </div>

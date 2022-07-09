@@ -4,7 +4,7 @@ import ItemDetail from './ItemDetail';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function Shop ( {inventory, cart, addToCart} ) {
+function Shop ( {inventory, cart, addToCart, removeFromCart} ) {
     return (
         <div className='shop'>
                 <Routes>
@@ -12,7 +12,7 @@ function Shop ( {inventory, cart, addToCart} ) {
                 </Routes>
 
             {inventory.map((index) => (
-                <ItemCard key={index.code} code={index.code} name={index.name} price={index.price} description={index.description} image={index.image} addToCart={addToCart} />
+                <ItemCard key={index.code} code={index.code} name={index.name} price={index.price} description={index.description} image={index.image} addToCart={addToCart} removeFromCart={removeFromCart} />
             ))}
         </div>
     )

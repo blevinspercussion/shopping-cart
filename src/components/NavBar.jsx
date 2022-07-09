@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 function NavBar ({cart}) {
 
     useEffect(() => {
-        console.log(cart);
     }, [cart]);
 
     return (

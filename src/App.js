@@ -60,8 +60,17 @@ function App() {
     setCart(cart.concat(code));
   };
 
-  const removeFromCart = () => {
-
+  const removeFromCart = (code) => {
+    const index = cart.findIndex(item => item === code);
+    if (index > -1) {
+      setCart([
+        ...cart.slice(0, index),
+        ...cart.slice(index + 1, cart.length)
+      ]);
+    }
+    console.log(index);
+    console.log(code);
+    console.log(cart);
   };
 
 
@@ -75,6 +84,7 @@ function App() {
                   cart={cart}
                   inventory={inventory}
                   addToCart={addToCart}
+                  removeFromCart={removeFromCart}
                   /> } />
           <Route path="/cart" element={ <Cart cart={cart} inventory={inventory}/>} />
           <Route  />
