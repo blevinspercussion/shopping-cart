@@ -58,7 +58,6 @@ function App() {
 
   const addToCart = (code) => {
     setCart(cart.concat(code));
-    console.log(cart);
   };
 
   const removeFromCart = () => {
@@ -69,7 +68,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header />
+      <Header cart={cart}/>
         <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/shop/*" element={ <Shop 

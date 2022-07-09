@@ -1,8 +1,14 @@
 import './Components.css';
 
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-function NavBar () {
+function NavBar ({cart}) {
+
+    useEffect(() => {
+        console.log(cart);
+    }, [cart]);
+
     return (
         <div className='navbar'>
             <ul>
@@ -10,8 +16,9 @@ function NavBar () {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Cart</li>
+                    <li>Items in cart: {cart.length}</li>
                 </Link>
+                
             </ul>
         </div>
     )
