@@ -3,9 +3,9 @@ import ItemCard from './ItemCard';
 
 function Shop ( {inventory} ) {
     return (
-        <div>
+        <div className='shop'>
             {inventory.map((index) => (
-                <ItemCard key={index.code} name={index.name} price={index.price} description={index.description} />
+                <ItemCard key={index.code} name={index.name} price={index.price} description={index.description} image={index.image} />
             ))}
         </div>
     )

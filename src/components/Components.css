@@ -45,3 +45,30 @@ a:hover {
     padding: 25px;
     background-color: rgb(72, 72, 72);
 }
+
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-color: white;
+}
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.product-image {
+    height: 25vh;
+    transition: 0.3s;
+}
+
+.product-image:hover {
+    filter: drop-shadow(10px 10px 10px black);
+    transition: 0.3s;
+}
