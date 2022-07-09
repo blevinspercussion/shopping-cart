@@ -70,8 +70,8 @@ function App() {
         ...cart.slice(0, index),
         ...cart.slice(index + 1, cart.length)
       ]);
+      setTotal(total -= price);
     }
-    setTotal(total -= price);
   };
 
 
