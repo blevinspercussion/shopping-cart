@@ -3,11 +3,10 @@ import { useEffect } from 'react';
 
 function CartItem ({ cart, name, total }) {
 
-    useEffect(() => {
-    }, [cart])
 
     return (
-        <div>        
+        <div>
+            {name}
         </div>
     )
 }

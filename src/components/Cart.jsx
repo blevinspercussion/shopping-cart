@@ -4,23 +4,15 @@ import { useEffect } from 'react';
 
 function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
 
-    useEffect(() => {
-
-    });
-
     return (
         <div className='cart'>
             <h1>Cart</h1>
             {cart.map((item, index) => (
-                <div>{item.name}</div>
-                // <CartItem 
-                //     key={index}
-                //     cart={cart}
-                //     name={item.name}
-                //     total={total}
-                //     />
+                <li className='cart-item' key={index}>
+                    <img className='product-image-small' src={item.image} />
+                    <p>{item.name}</p>
+                </li>
             ))}
-            Total= ${total}
         </div>
     )
 }

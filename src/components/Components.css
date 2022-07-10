@@ -87,4 +87,17 @@ a:hover {
     align-items: center;
     justify-content: center;
     background-color: white;
+    list-style: none;
+    padding-top: 150px;
+}
+
+.product-image-small {
+    height: 10vh;
+    padding: 50px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

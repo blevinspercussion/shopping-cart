@@ -7,7 +7,7 @@ import Cart from './components/Cart';
 import Footer from './components/Footer';
 import ItemDetail from './components/ItemDetail';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
 
 function App() {
@@ -61,18 +61,15 @@ function App() {
 
   // Functions
 
-  // const addToCart = (code, price, total, item) => {
-  //   setCart(cart.concat(item));
-  //   setTotal(total += price);
-  //   console.log(item);
-  // };
+  useEffect(() => {
+    console.log(cart);
+  }, [cart])
 
   const addToCart = (item) => {
     setCart(cart.concat(item));
     setTotal(total + item.price);
-    console.log(total);
-    console.log(item.price);
-    console.log(cart);
+
+    return(cart);
   };
 
   const removeFromCart = (item, name) => {
