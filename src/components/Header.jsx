@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Header ({cart, total}) {
     return (
         <div className='header'>
-            <Link to="/">
+            <Link to="/shopping-cart">
                 <h1>The Snare Drum Store</h1>
             </Link>
             <NavBar cart={cart} total={total}/>
