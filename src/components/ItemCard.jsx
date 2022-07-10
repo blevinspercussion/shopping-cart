@@ -47,7 +47,7 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
         <div className='item-card'>
             <h1>{name}</h1>
             <Link to={'/shop/' + name}>
-                <img className='product-image' src={image}></img>
+                <img className='product-image' src={require(image)}></img>
             </Link>
             <h2>${price}</h2>
             <h3>In Cart: {numberInCart}</h3>
