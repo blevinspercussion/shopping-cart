@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.d035439a.css",
-    "main.js": "/shopping-cart/static/js/main.33817e32.js",
-    "static/media/black_panther.png": "/shopping-cart/static/media/black_panther.29c1950966fc90ae51fc.png",
-    "static/media/black_beauty.webp": "/shopping-cart/static/media/black_beauty.c842d491bf81a65bd93e.webp",
+    "main.js": "/shopping-cart/static/js/main.a61b5a0d.js",
+    "static/media/blackbeauty.png": "/shopping-cart/static/media/blackbeauty.a543c097f21b2db203ff.png",
+    "static/media/dwblacknickel.png": "/shopping-cart/static/media/dwblacknickel.a2857845763adeb1e5ad.png",
+    "static/media/blackpanther.png": "/shopping-cart/static/media/blackpanther.29c1950966fc90ae51fc.png",
     "static/media/acrolite.png": "/shopping-cart/static/media/acrolite.d9a5d6c6534ce861f7ef.png",
     "static/media/snaredrums-banner.jpg": "/shopping-cart/static/media/snaredrums-banner.1d2af25a88ecfa78eb08.jpg",
-    "static/media/dw_bn.webp": "/shopping-cart/static/media/dw_bn.bc888df4cb7295155aaa.webp",
     "index.html": "/shopping-cart/index.html",
     "main.d035439a.css.map": "/shopping-cart/static/css/main.d035439a.css.map",
-    "main.33817e32.js.map": "/shopping-cart/static/js/main.33817e32.js.map"
+    "main.a61b5a0d.js.map": "/shopping-cart/static/js/main.a61b5a0d.js.map"
   },
   "entrypoints": [
     "static/css/main.d035439a.css",
-    "static/js/main.33817e32.js"
+    "static/js/main.a61b5a0d.js"
   ]
 }
