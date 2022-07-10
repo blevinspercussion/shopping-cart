@@ -1,8 +1,8 @@
 import './Components.css';
-// import acrolite from './img/acrolite.png';
-// import blackbeauty from './img/black_beauty.webp';
-// import blackpanther from './img/black_panther.png';
-// import dwblacknickel from './img/dw_bn.webp';
+import acrolite from './img/acrolite.png';
+import blackbeauty from './img/black_beauty.webp';
+import blackpanther from './img/black_panther.png';
+import dwblacknickel from './img/dw_bn.webp';
 
 
 import { useEffect } from 'react';
