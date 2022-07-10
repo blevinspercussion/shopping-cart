@@ -85,7 +85,7 @@ function App() {
       <Router>
       <Header cart={cart} total={total}/>
         <Routes>
-          <Route path="/" element={ <Home /> } />
+          <Route path="/shopping-cart" element={ <Home /> } />
           <Route path="/shop/*" element={ <Shop 
                   cart={cart}
                   inventory={inventory}
