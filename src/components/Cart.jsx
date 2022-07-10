@@ -58,6 +58,7 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
             <br />
             <br />
             Total: ${total}
+            <button>Checkout</button>
         </div>
     )
 }
