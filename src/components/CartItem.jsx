@@ -17,7 +17,7 @@ function CartItem ({ cart, name, image, code, total }) {
 
     return (
         <div className='cart-item'>
-            <img className='product-image-small' src={image} />
+            <img className='product-image-small' src={require("./img/" + code + ".png")} />
             <p>{name}     X     {numberInCart}</p>
         </div>
     )
