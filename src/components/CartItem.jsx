@@ -1,4 +1,8 @@
 import './Components.css';
+import acrolite from './img/acrolite.png';
+import blackbeauty from './img/blackbeauty.png';
+import blackpanther from './img/blackpanther.png';
+import dwblacknickel from './img/dwblacknickel.png';
 import { useEffect } from 'react';
 
 function CartItem ({ cart, name, image, code, total }) {
