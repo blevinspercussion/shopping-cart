@@ -1,7 +1,7 @@
 import './Components.css';
 import { useEffect } from 'react';
 
-function CartItem ({ cart, name, image, code }) {
+function CartItem ({ cart, name, image, code, total }) {
 
     const getNumberInCart = () => {
         let count = 0;

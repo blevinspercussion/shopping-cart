@@ -14,6 +14,15 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
         return count;
     };
 
+    if (cart.length === 0) {
+        return (
+            <div className='cart'>
+                <h1>Cart</h1>
+                <p>Your cart is empty</p>
+            </div>
+        )
+    }
+
     return (
         <div className='cart'>
             <h1>Cart</h1>
@@ -28,8 +37,12 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
                     image={item.image}
                     code={item.code}
                     cart={cart}
+                    total={total}
                 />
             ))}
+            <br />
+            <br />
+            Total: ${total}
         </div>
     )
 }

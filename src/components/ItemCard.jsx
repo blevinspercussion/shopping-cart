@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Cart from './Cart';
 
 function ItemCard ({code, item, name, price, description, image, cart, inventory, total, addToCart, removeFromCart}) {
-
     
     useEffect(() => {
         getNumberInCart();
@@ -18,16 +17,14 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
                 count++;
             }
         };
+        item.inCart = count;
+        console.log(item.inCart);
         return count;
     };
 
     let numberInCart = getNumberInCart();
-    
-    // const handlePlusClick = (e) => {
-    //     e.preventDefault();
-    //     addToCart(code, price, total);
-    //     getNumberInCart();
-    // };
+
+
 
     const handlePlusClick = (e) => {
         e.preventDefault();
