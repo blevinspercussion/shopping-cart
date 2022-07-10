@@ -1,9 +1,13 @@
 import './Components.css';
+import { useEffect } from 'react';
 
-function CartItem ({ cart, key, name }) {
+function CartItem ({ cart, name, total }) {
+
+    useEffect(() => {
+    }, [cart])
+
     return (
-        <div>
-            {name}
+        <div>        
         </div>
     )
 }

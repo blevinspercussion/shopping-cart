@@ -20,6 +20,7 @@ function Shop ( {inventory, cart, total, addToCart, removeFromCart} ) {
                     price={index.price}
                     description={index.description}
                     image={index.image}
+                    inCart={index.inCart}
                     total={total}
                     cart={cart}
                     inventory={inventory}
