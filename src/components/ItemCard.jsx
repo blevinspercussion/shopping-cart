@@ -1,8 +1,8 @@
 import './Components.css';
-import '../../public/img/acrolite.png';
-import '../../public/img/black_beauty.webp';
-import '../../public/img/black_panther.png';
-import '../../public/img/dw_bn.webp';
+import './img/acrolite.png';
+import './img/black_beauty.webp';
+import './img/black_panther.png';
+import './img/dw_bn.webp';
 
 
 import { useEffect } from 'react';
