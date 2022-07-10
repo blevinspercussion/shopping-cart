@@ -1,12 +1,24 @@
 import './Components.css';
 import { useEffect } from 'react';
 
-function CartItem ({ cart, name, total }) {
+function CartItem ({ cart, name, image, code }) {
 
+    const getNumberInCart = () => {
+        let count = 0;
+        for (let item of cart) {
+            if (item.code === code) {
+                count++;
+            }
+        };
+        return count;
+    };
+
+    let numberInCart = getNumberInCart();
 
     return (
-        <div>
-            {name}
+        <div className='cart-item'>
+            <img className='product-image-small' src={image} />
+            <p>{name}     X     {numberInCart}</p>
         </div>
     )
 }

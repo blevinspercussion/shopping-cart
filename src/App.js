@@ -61,15 +61,11 @@ function App() {
 
   // Functions
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart])
+
 
   const addToCart = (item) => {
     setCart(cart.concat(item));
     setTotal(total + item.price);
-
-    return(cart);
   };
 
   const removeFromCart = (item, name) => {
