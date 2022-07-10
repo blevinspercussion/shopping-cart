@@ -1,8 +1,8 @@
 import './Components.css';
-import acrolite from './img/acrolite.png';
-import blackbeauty from './img/black_beauty.webp';
-import blackpanther from './img/black_panther.png';
-import dwblacknickel from './img/dw_bn.webp';
+// import acrolite from './img/acrolite.png';
+// import blackbeauty from './img/black_beauty.webp';
+// import blackpanther from './img/black_panther.png';
+// import dwblacknickel from './img/dw_bn.webp';
 
 
 import { useEffect } from 'react';
@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import Cart from './Cart';
 
 function ItemCard ({code, item, name, price, description, image, cart, inventory, total, addToCart, removeFromCart}) {
+
     
     useEffect(() => {
         getNumberInCart();
@@ -47,7 +48,7 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
         <div className='item-card'>
             <h1>{name}</h1>
             <Link to={'/shop/' + name}>
-                <img className='product-image' src={require(code)}></img>
+                <img className='product-image' src={require("./img/" + code + ".png")}></img>
             </Link>
             <h2>${price}</h2>
             <h3>In Cart: {numberInCart}</h3>
