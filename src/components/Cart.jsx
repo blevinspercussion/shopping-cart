@@ -1,9 +1,23 @@
 import './Components.css';
 import CartItem from './CartItem';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
 
+    const uniqueCodes = [];
+
+    const uniqueItems = cart.filter(item => {
+        const isDuplicate = uniqueCodes.includes(item.code);
+        if (!isDuplicate) {
+            uniqueCodes.push(item.code);
+            return true;
+        }
+        return false;
+    });
+
+    console.log(uniqueItems);
+
+    
     const getNumberInCart = (code) => {
         let count = 0;
         for (let item of cart) {
@@ -13,6 +27,7 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
         };
         return count;
     };
+
 
     if (cart.length === 0) {
         return (
@@ -26,7 +41,7 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
     return (
         <div className='cart'>
             <h1>Cart</h1>
-            {cart.map((item, index) => (
+            {uniqueItems.map((item, index) => (
                 // <li className='cart-item' key={index}>
                 //     <img className='product-image-small' src={item.image} />
                 //     <p>{item.name}</p>

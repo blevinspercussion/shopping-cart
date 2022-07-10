@@ -18,7 +18,6 @@ function ItemCard ({code, item, name, price, description, image, cart, inventory
             }
         };
         item.inCart = count;
-        console.log(item.inCart);
         return count;
     };
 

@@ -61,8 +61,6 @@ function App() {
 
   // Functions
 
-
-
   const addToCart = (item) => {
     setCart(cart.concat(item));
     setTotal(total + item.price);
