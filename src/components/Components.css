@@ -102,3 +102,13 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
+
+.btn-checkout {
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.cart p {
+    font-size: larger;
+}
