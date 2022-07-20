@@ -1,8 +1,7 @@
 import './Components.css';
 import CartItem from './CartItem';
-import { useEffect, useState } from 'react';
 
-function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
+function Cart ({ cart, total, addToCart, removeFromCart }) {
 
     const uniqueCodes = [];
 
@@ -42,10 +41,6 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
         <div className='cart'>
             <h1>Cart</h1>
             {uniqueItems.map((item, index) => (
-                // <li className='cart-item' key={index}>
-                //     <img className='product-image-small' src={item.image} />
-                //     <p>{item.name}</p>
-                // </li>
                 <CartItem 
                     key={index}
                     item={item}

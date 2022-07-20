@@ -3,7 +3,7 @@ import './Components.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function NavBar ({cart, total}) {
+function NavBar ({cart}) {
 
     useEffect(() => {
     }, [cart]);
