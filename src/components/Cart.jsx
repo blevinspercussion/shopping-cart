@@ -48,11 +48,14 @@ function Cart ({ cart, inventory, total, addToCart, removeFromCart }) {
                 // </li>
                 <CartItem 
                     key={index}
+                    item={item}
                     name={item.name}
                     image={item.image}
                     code={item.code}
                     cart={cart}
                     total={total}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
                 />
             ))}
             <br />

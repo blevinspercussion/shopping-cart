@@ -112,3 +112,11 @@ a:hover {
 .cart p {
     font-size: larger;
 }
+
+.add-remove-buttons {
+    margin-left: 25px;
+}
+
+.add-remove-buttons button {
+    margin-right: 5px;
+}
