@@ -1,8 +1,7 @@
 import './Components.css';
+import { ReactDOM } from 'react';
 
 function CartItem ({ cart, item, name, code, addToCart, removeFromCart }) {
-
-
 
     const getNumberInCart = () => {
         let count = 0;
@@ -20,7 +19,8 @@ function CartItem ({ cart, item, name, code, addToCart, removeFromCart }) {
         e.preventDefault();
         addToCart(item);
         getNumberInCart();
-    }
+        
+    };
 
 
     const handleMinusClick = (e) => {
